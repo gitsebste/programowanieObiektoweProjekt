@@ -16,8 +16,8 @@
         
         <form:form commandName="person" action="save.htm" method="POST">
             name        <form:input path="name"/>       <form:errors path="name"/>  <br/>
-            lastName"   <form:input path="lastName"/>   <form:errors path="lastName"/>  <br/>
-            email"      <form:input path="email"/>      <form:errors path="email"/>  <br/>
+            lastName   <form:input path="lastName"/>   <form:errors path="lastName"/>  <br/>
+            email      <form:input path="email"/>      <form:errors path="email"/>  <br/>
             
             <form:button>Zapisz</form:button>
                 

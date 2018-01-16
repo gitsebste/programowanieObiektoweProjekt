@@ -5,12 +5,14 @@
  */
 package com.s.programowanieobiektoweprojekt.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import org.hibernate.validator.constraints.Email;
 import org.hibernate.validator.constraints.NotEmpty;
+
 
 /**
  *
@@ -25,7 +27,7 @@ public class Person {
     private String name;
     @NotEmpty
     private String lastName;
-    @Email @NotEmpty
+    @Email @NotEmpty @Column(unique=true)
     private String email;
 
     public String getLastName() {
