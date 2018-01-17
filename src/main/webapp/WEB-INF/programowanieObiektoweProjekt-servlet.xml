@@ -24,6 +24,9 @@
         <property name="prefix" value="/WEB-INF/jsp/"></property>
         <property name="suffix" value=".jsp"></property>        
     </bean>
+    <bean id="personService" class="com.s.programowanieobiektoweprojekt.service.PersonService" >
+<!--		<property name="name" value="mkyongB" />-->
+	</bean>
     
     <bean id="messageSource"
           class="org.springframework.context.support.ResourceBundleMessageSource">
