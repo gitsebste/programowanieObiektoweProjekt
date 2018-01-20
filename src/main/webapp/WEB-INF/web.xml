@@ -18,7 +18,7 @@
 
     <servlet-mapping>
         <servlet-name>programowanieObiektoweProjekt</servlet-name>
-        <url-pattern>*.htm</url-pattern>
+<url-pattern>*.htm</url-pattern><!--        <url-pattern>*.htm</url-pattern>-->
     </servlet-mapping>
     
     <listener>

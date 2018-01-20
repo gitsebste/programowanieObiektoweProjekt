@@ -4,6 +4,7 @@
 package com.s.programowanieobiektoweprojekt.controller;
 
 import com.s.programowanieobiektoweprojekt.model.Person;
+import com.s.programowanieobiektoweprojekt.model.Unit;
 import com.s.programowanieobiektoweprojekt.service.GenericService;
 import javax.validation.Valid;
 import org.apache.log4j.Logger;
@@ -21,45 +22,45 @@ import org.springframework.web.servlet.ModelAndView;
  * @author Adrian Lapierre <adrian@softproject.com.pl>
  */
 @Controller
-@RequestMapping("/person")
-public class PersonController {
+@RequestMapping("/unit")
+public class UnitController {
     
     protected Logger logger = Logger.getLogger(getClass());
     
-    @Autowired @Qualifier("personService")
-    GenericService<Person> personService;//PersonDAO personDAO;
+    @Autowired @Qualifier("unitService")
+    GenericService<Unit> service;//PersonDAO personDAO;
     
     @RequestMapping("/add")
     public ModelAndView add() {
         
-        logger.debug("PersonController.add()");
+        logger.debug("UnitController.add()");
         
-        ModelAndView model = new ModelAndView("add");
+        ModelAndView model = new ModelAndView("addUnit");
         
         //Person p = new Person();p.setName("Name");
-        model.addObject("person", new Person());
+        model.addObject("obj", new Unit());
         
         return model;
     }
     @RequestMapping("/get/{id}")
     public ModelAndView get(@PathVariable("id") int id) {
         
-        logger.debug("PersonController.get() + id = "+id);
+        logger.debug("UnitController.get() + id = "+id);
         
         ModelAndView model = new ModelAndView("response");                
-        model.addObject("object", personService.getObjById(id));
+        model.addObject("object", service.getObjById(id));
         
         return model;
     }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
-    public String save(@Valid Person p,BindingResult bindingResult) {
-        logger.debug("PersonController.get() + person = "+p);//System.out.println(p);
+    public String save(@Valid Unit p,BindingResult bindingResult) {
+        logger.debug("UnitController.get() + unit = "+p);//System.out.println(p);
         
         if(bindingResult.hasErrors())
         {
-            return "add";
+            return "addUnit";
         }
-        personService.save(p);
+        service.save(p);
         //personDAO.save(p);
         
         return "redirect:/home.htm";

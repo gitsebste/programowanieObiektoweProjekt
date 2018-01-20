@@ -5,7 +5,7 @@
  */
 package com.s.programowanieobiektoweprojekt.dao;
 
-import com.s.programowanieobiektoweprojekt.model.Person;
+import com.s.programowanieobiektoweprojekt.model.Unit;
 import org.springframework.data.repository.CrudRepository;
 
 
@@ -15,7 +15,7 @@ import org.springframework.data.repository.CrudRepository;
  * @author device02
  */
 
-public interface PersonDAO extends CrudRepository<Person, Integer>{
-    public Person findById(int id);
-    public Person findByEmail(String email);
+public interface UnitDAO extends CrudRepository<Unit, Integer>{
+    public Unit findById(int id);
+    public Unit findByShortName(String shortName);
 }

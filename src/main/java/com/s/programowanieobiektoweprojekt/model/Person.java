@@ -5,6 +5,7 @@
  */
 package com.s.programowanieobiektoweprojekt.model;
 
+import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -27,7 +28,7 @@ public class Person {
     @NotEmpty
     private String lastName;
     @Email @NotEmpty @Column(unique=true)
-    private String email;
+    private String email;    
 
     public String getLastName() {
         return lastName;
@@ -69,7 +70,6 @@ public class Person {
     }
 
     public Person() {
-                
     }
     
 }

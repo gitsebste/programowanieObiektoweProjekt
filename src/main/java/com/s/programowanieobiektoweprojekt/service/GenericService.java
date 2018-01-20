@@ -25,5 +25,7 @@ public abstract class GenericService<T> {
      */
     public abstract Iterable<T> getAll();
     public abstract void save(T toSave);
+    public abstract void update(T toUpdate);
+    public abstract T getObjById(int objId);
     
 }

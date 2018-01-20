@@ -6,7 +6,9 @@
 package com.s.programowanieobiektoweprojekt.service;
 
 import com.s.programowanieobiektoweprojekt.dao.PersonDAO;
+import com.s.programowanieobiektoweprojekt.dao.UnitDAO;
 import com.s.programowanieobiektoweprojekt.model.Person;
+import com.s.programowanieobiektoweprojekt.model.Unit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,31 +18,32 @@ import org.springframework.stereotype.Service;
  * @author device02
  */
 @Service
-public class PersonService extends GenericService<Person>{
+public class UnitService extends GenericService<Unit>{
 
     @Autowired            
-    PersonDAO dao;
+    UnitDAO dao;
     
     @Override
-    public Iterable<Person> getAll() {
+    public Iterable<Unit> getAll() {
         return dao.findAll();
     }
 
     @Override
-    public void save(Person toSave) {
+    public void save(Unit toSave) {
         dao.save(toSave);
     }
 
-    @Override
-    public Person getObjById(int objId) {
-        return dao.findById(objId);        
+    
+    public Unit getObjByShortName(String shortName) {
+        return dao.findByShortName(shortName);        
     }
-        public Person getObjByEmail(String email) {
-        return dao.findByEmail(email);        
+    @Override
+        public Unit getObjById(int objId) {
+        return dao.findById(objId);        
     }
 
     @Override
-    public void update(Person toUpdate) {
+    public void update(Unit toUpdate) {
         dao.save(toUpdate);
     }
   

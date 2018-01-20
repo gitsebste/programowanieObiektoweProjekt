@@ -5,13 +5,11 @@
  */
 package com.s.programowanieobiektoweprojekt.model;
 
-import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -19,24 +17,18 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @author device02
  */
 @Entity
-public class Location {
-    @Id @GeneratedValue(strategy=GenerationType.AUTO)
+public class Unit {
+        @Id @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     @NotEmpty @Column(unique=true)
     private String name;
-    @NotEmpty
-    private String description;
-//    @OneToMany
-//    private List<Item> items;
+    @NotEmpty @Column(unique=true)
+    private String shortName;
 
     @Override
     public String toString() {
-        return "Location{" + "id=" + id + ", name=" + name + ", description=" + description + '}';
+        return "Unit{" + "id=" + id + ", name=" + name + ", shortName=" + shortName + '}';
     }
-
- 
-
-  
 
     public Integer getId() {
         return id;
@@ -54,12 +46,12 @@ public class Location {
         this.name = name;
     }
 
-    public String getDescription() {
-        return description;
+    public String getShortName() {
+        return shortName;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setShortName(String shortName) {
+        this.shortName = shortName;
     }
     
 }
