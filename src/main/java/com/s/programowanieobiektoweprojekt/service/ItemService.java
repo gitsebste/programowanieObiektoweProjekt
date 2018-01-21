@@ -90,5 +90,9 @@ public class ItemService extends GenericService<Item>{
         
         if(toSave.getPersonEmail()!=null)
             toSave.setPerson(pservice.getObjByEmail(toSave.getPersonEmail()));
+        if(toSave.getLocationName()!=null)
+            toSave.setLocation(lservice.getObjByName(toSave.getLocationName()));
+        if(toSave.getUnitShortName()!=null)
+            toSave.setUnit(uservice.getObjByShortName(toSave.getUnitShortName()));
     }
     }
