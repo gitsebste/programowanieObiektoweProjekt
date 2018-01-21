@@ -26,14 +26,40 @@ public class Location {
     private String name;
     @NotEmpty
     private String description;
-//    @OneToMany
-//    private List<Item> items;
+    private float building;
+    private float room;
+    private int floor;
 
     @Override
     public String toString() {
-        return "Location{" + "id=" + id + ", name=" + name + ", description=" + description + '}';
+        return "Location{" + "id=" + id + ", name=" + name + ", description=" + description + ", building=" + building + ", room=" + room + ", floor=" + floor + '}';
     }
 
+    public float getBuilding() {
+        return building;
+    }
+
+    public void setBuilding(float building) {
+        this.building = building;
+    }
+
+    public float getRoom() {
+        return room;
+    }
+
+    public void setRoom(float room) {
+        this.room = room;
+    }
+
+    public int getFloor() {
+        return floor;
+    }
+
+    public void setFloor(int floor) {
+        this.floor = floor;
+    }
+    
+    
  
 
   

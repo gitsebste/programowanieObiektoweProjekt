@@ -137,8 +137,10 @@ public class Item {
     }
 
     public void setLocation(Location location) {
+        if(location!=null){
         locationName=location.getName();
         locationId=location.getId();
+        }
         this.location = location;
     }
 
@@ -154,8 +156,10 @@ public class Item {
     }
 
     public void setPerson(Person person) {
+        if(person!=null){
         personEmail=person.getEmail();
         personId=person.getId();
+        }
         this.person = person;
     }
 
@@ -164,8 +168,9 @@ public class Item {
     }
 
     public void setUnit(Unit unit) {
+        if(unit!=null){
         unitShortName=unit.getShortName();
-        unitId=unit.getId();
+        unitId=unit.getId();}
         this.unit = unit;
     }
     public Location getLocations() {

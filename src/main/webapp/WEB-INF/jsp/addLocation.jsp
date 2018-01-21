@@ -14,14 +14,13 @@
     <body>
         <h1>Dodaj obiekt</h1>
         
-        <form:form commandName="item" action="save.htm" method="POST">            
+        <form:form commandName="location" action="save.htm" method="POST">            
             
-            name        <form:input path="name"/>       <form:errors path="name"/>  <br/>
-            code   <form:input path="code"/>   <form:errors path="code"/>  <br/>            
+            name        <form:input path="name"/>       <form:errors path="name"/>  <br/>           
             description   <form:input path="description"/>   <form:errors path="description"/>  <br/>   
-            unitShortName <form:input path="unitShortName"/> <br/>
-            personEmail <form:input path="personEmail"/>   <form:errors path="personEmail"/>  <br/>   
-            locationName <form:input path="locationName"/> <br/>
+            building <form:input path="building"/>   <form:errors path="building"/>  <br/>   
+            room <form:input path="room"/>   <form:errors path="room"/>  <br/>   
+            floor <form:input path="floor"/>   <form:errors path="floor"/>  <br/>   
             <form:button>Zapisz</form:button>
                 
             

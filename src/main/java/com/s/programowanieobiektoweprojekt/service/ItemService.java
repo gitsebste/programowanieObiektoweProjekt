@@ -7,6 +7,7 @@ package com.s.programowanieobiektoweprojekt.service;
 
 import com.s.programowanieobiektoweprojekt.dao.ItemDAO;
 import com.s.programowanieobiektoweprojekt.model.Item;
+import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -36,6 +37,7 @@ public class ItemService extends GenericService<Item>{
 
     @Override
     public void save(Item toSave) {
+        setNotUsedToNull(toSave);
         dao.save(toSave);
     }
 
@@ -46,11 +48,25 @@ public class ItemService extends GenericService<Item>{
 
     public Item getObjByCode(String code) {
         return dao.findByCode(code); 
-        //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+        public List<Item> getObjByLocationBuilding(float building) {
+        return dao.findByLocationBuilding(building); 
+    }
+        public List<Item> getObjByLocationFloor(float floor) {
+        return dao.findByLocationFloor(floor); 
+    }
+        public List<Item> getObjByLocationRoom(float room) {
+        return dao.findByLocationRoom(room); 
+    }
+           public List<Item> getObjByUnitShortName(String shortName) {
+        return dao.findByUnitShortName(shortName);
+    }   
 
     @Override
     public void update(Item toUpdate) {
+        
+        setNotUsedToNull(toUpdate);
+        
         toUpdate.setId(getObjByCode(toUpdate.getCode()).getId());
         if(!IsNull(toUpdate.getUnitShortName()))
             toUpdate.setUnit(uservice.getObjByShortName(toUpdate.getUnitShortName()));
@@ -65,5 +81,11 @@ public class ItemService extends GenericService<Item>{
     boolean IsNull(String tmp)
     {
         return (tmp==null || tmp=="");
+    }
+
+    private void setNotUsedToNull(Item toSave) {
+                if(toSave.getLocation()!=null)if(toSave.getLocation().getId()==null)toSave.setLocation(null);
+        if(toSave.getPerson()!=null)if(toSave.getPerson().getId()==null)toSave.setPerson(null);
+        if(toSave.getUnit()!=null)if(toSave.getUnit().getId()==null)toSave.setUnit(null);
     }
     }

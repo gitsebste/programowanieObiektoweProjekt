@@ -53,6 +53,16 @@ public class ItemController {
         
         return model;
     }
+        @RequestMapping("/getByUnitShortName/{shortName}")
+    public ModelAndView getByUnitShortName(@PathVariable("shortName") String shortName) {
+        
+        logger.debug("ItemController.getByUnitShortName() + shortName = "+shortName);
+        
+        ModelAndView model = new ModelAndView("response");                
+        model.addObject("object", service.getObjByUnitShortName(shortName));
+        
+        return model;
+    }
         @RequestMapping("/get/byCode/{code}")
     public ModelAndView getByCode(@PathVariable("code") String code) {
         
@@ -65,12 +75,11 @@ public class ItemController {
     }
     
             @RequestMapping("/update/byCode/{code}")
-    public ModelAndView updateByCode(@PathVariable("code") String code,BindingResult bindingResult) {
+    public ModelAndView updateByCode(@PathVariable("code") String code){//,BindingResult bindingResult) {
         
         logger.debug("ItemController.updateByCode() + code = "+code);
         
-        for (ObjectError e : bindingResult.getAllErrors())
-            System.out.println(e);
+        //for (ObjectError e : bindingResult.getAllErrors())System.out.println(e);
         
         ModelAndView model = new ModelAndView("addItem");
         Item item = service.getObjByCode(code);
