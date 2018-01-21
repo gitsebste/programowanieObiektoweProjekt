@@ -87,5 +87,8 @@ public class ItemService extends GenericService<Item>{
                 if(toSave.getLocation()!=null)if(toSave.getLocation().getId()==null)toSave.setLocation(null);
         if(toSave.getPerson()!=null)if(toSave.getPerson().getId()==null)toSave.setPerson(null);
         if(toSave.getUnit()!=null)if(toSave.getUnit().getId()==null)toSave.setUnit(null);
+        
+        if(toSave.getPersonEmail()!=null)
+            toSave.setPerson(pservice.getObjByEmail(toSave.getPersonEmail()));
     }
     }
