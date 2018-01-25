@@ -15,13 +15,8 @@
     </head>
     <body>
         
-    <c:forEach items="${object}" var="element"> 
-        <table>  
-            <tr>      <td>${element}</td>  </tr>
- 
-            
-        </table> <hr /> 
-    </c:forEach>
+    ${object}
+    
 
     </body>
 </html>

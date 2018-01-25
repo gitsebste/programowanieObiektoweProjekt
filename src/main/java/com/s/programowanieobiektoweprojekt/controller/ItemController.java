@@ -4,6 +4,7 @@
 package com.s.programowanieobiektoweprojekt.controller;
 
 import com.s.programowanieobiektoweprojekt.model.Item;
+import com.s.programowanieobiektoweprojekt.model.Person;
 import com.s.programowanieobiektoweprojekt.service.GenericService;
 import com.s.programowanieobiektoweprojekt.service.ItemService;
 import javax.validation.Valid;
@@ -16,6 +17,7 @@ import org.springframework.validation.ObjectError;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
@@ -24,6 +26,7 @@ import org.springframework.web.servlet.ModelAndView;
  */
 @Controller
 @RequestMapping("/item")
+//@SessionAttributes("user")
 public class ItemController {
     
     protected Logger logger = Logger.getLogger(getClass());
@@ -56,28 +59,54 @@ public class ItemController {
         @RequestMapping("/getByUnitShortName/{shortName}")
     public ModelAndView getByUnitShortName(@PathVariable("shortName") String shortName) {
         
-        logger.debug("ItemController.getByUnitShortName() + shortName = "+shortName);
+        logger.debug("ItemController.getByUnitShortName(){shortName} + shortName = "+shortName);
         
         ModelAndView model = new ModelAndView("response");                
         model.addObject("object", service.getObjByUnitShortName(shortName));
         
         return model;
     }
+            @RequestMapping("/getByUnitShortName")
+    public String getByUnitShortName(Person p) {
+        String name = p.getName();
+        logger.debug("ItemController.getByUnitShortName() + shortName = "+name);
+        
+        return "redirect:/item/getByUnitShortName/"+name+".htm";
+    }
+    
+    
+    
+    
         @RequestMapping("/get/byCode/{code}")
     public ModelAndView getByCode(@PathVariable("code") String code) {
         
-        logger.debug("ItemController.get() + code = "+code);
+        logger.debug("ItemController.get(){code} + code = "+code);
         
-        ModelAndView model = new ModelAndView("response");                
+        ModelAndView model = new ModelAndView("singleResponse");                
         model.addObject("object", service.getObjByCode(code));
         
         return model;
     }
+                @RequestMapping("/get/byCode")
+    public String getByCode(Person p) {
+        String name = p.getName();
+        logger.debug("ItemController.getByUnitShortName() + shortName = "+name);
+        
+        return "redirect:/item/get/byCode/"+name+".htm";
+    }
+    
+    
+    
+    
+    
+    
+    
+    
     
             @RequestMapping("/update/byCode/{code}")
     public ModelAndView updateByCode(@PathVariable("code") String code){//,BindingResult bindingResult) {
         
-        logger.debug("ItemController.updateByCode() + code = "+code);
+        logger.debug("ItemController.updateByCode(){code} + code = "+code);
         
         //for (ObjectError e : bindingResult.getAllErrors())System.out.println(e);
         
@@ -86,6 +115,13 @@ public class ItemController {
         model.addObject("item", item);
         
         return model;
+    }
+                @RequestMapping("/update/byCode")
+    public String updateByCode(Person p) {
+        String name = p.getName();
+        logger.debug("ItemController.getByUnitShortName() + code = "+name);
+        
+        return "redirect:/item//update/byCode/"+name+".htm";
     }
     
     @RequestMapping(value = "/save", method = RequestMethod.POST)
@@ -98,6 +134,7 @@ public class ItemController {
             System.out.println(e);
             return "addItem";
         }
+        
         service.save(p);
         //personDAO.save(p);
         

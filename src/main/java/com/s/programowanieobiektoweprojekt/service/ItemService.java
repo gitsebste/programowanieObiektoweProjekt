@@ -7,6 +7,7 @@ package com.s.programowanieobiektoweprojekt.service;
 
 import com.s.programowanieobiektoweprojekt.dao.ItemDAO;
 import com.s.programowanieobiektoweprojekt.model.Item;
+import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -31,7 +32,11 @@ public class ItemService extends GenericService<Item>{
     
     @Override
     public Iterable<Item> getAll() {
-        return dao.findAll();
+        List<Item> ans = new ArrayList<Item>();
+        for(Item item :dao.findAll())
+            ans.add(item);
+        getData(ans);
+        return ans; 
         
     }
 
@@ -50,16 +55,39 @@ public class ItemService extends GenericService<Item>{
         return dao.findByCode(code); 
     }
         public List<Item> getObjByLocationBuilding(float building) {
-        return dao.findByLocationBuilding(building); 
+            List<Item> ans = dao.findByLocationBuilding(building); 
+        getData(ans);
+        return ans; 
     }
         public List<Item> getObjByLocationFloor(float floor) {
-        return dao.findByLocationFloor(floor); 
+             List<Item> ans = dao.findByLocationFloor(floor); 
+        getData(ans);
+        return ans;
+    }
+
+    private void getData(List<Item> ans) {
+        for(Item item :ans)
+        {
+            setNotUsedToNull(item);
+            
+            item.setId(getObjByCode(item.getCode()).getId());
+            if(!IsNull(item.getUnitShortName()))
+                item.setUnit(uservice.getObjByShortName(item.getUnitShortName()));
+            if(!IsNull(item.getPersonEmail()))
+                item.setPerson(pservice.getObjByEmail(item.getPersonEmail()));
+            if(!IsNull(item.getLocationName()))
+                item.setLocation(lservice.getObjByName(item.getLocationName()));
+        }
     }
         public List<Item> getObjByLocationRoom(float room) {
-        return dao.findByLocationRoom(room); 
+                    List<Item> ans = dao.findByLocationRoom(room);
+        getData(ans);
+        return ans;
     }
            public List<Item> getObjByUnitShortName(String shortName) {
-        return dao.findByUnitShortName(shortName);
+               List<Item> ans = dao.findByUnitShortName(shortName);
+        getData(ans);
+        return ans;//dao.findByUnitShortName(shortName);
     }   
 
     @Override

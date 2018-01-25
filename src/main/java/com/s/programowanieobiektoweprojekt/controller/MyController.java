@@ -3,11 +3,9 @@
  */
 package com.s.programowanieobiektoweprojekt.controller;
 
-import com.s.programowanieobiektoweprojekt.model.Item;
 import com.s.programowanieobiektoweprojekt.model.Person;
-import com.s.programowanieobiektoweprojekt.service.ItemService;
+import com.s.programowanieobiektoweprojekt.service.NotificationService;
 import org.apache.log4j.Logger;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -27,12 +25,14 @@ public class MyController {
     @RequestMapping("/home")
     public ModelAndView home() {
         
+        //NotificationService.sendNotification(new Person(1,"n","ln","sebste92@gmail.com"), null, null, null);
+        
         logger.debug("MyController.home()");
         
         ModelAndView model = new ModelAndView("home");
         
-        Person p = new Person();p.setName("Name");
-        model.addObject("person", p);
+        //Person p = new Person();p.setName("Name");
+        model.addObject("person", new Person());
         
         return model;
     }

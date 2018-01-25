@@ -20,7 +20,7 @@ import org.hibernate.validator.constraints.NotEmpty;
  * @author device02
  */
 @Entity
-public class Person {
+public class Person implements Emailable{
     @Id @GeneratedValue(strategy=GenerationType.AUTO)
     private Integer id;
     @NotEmpty
@@ -29,6 +29,13 @@ public class Person {
     private String lastName;
     @Email @NotEmpty @Column(unique=true)
     private String email;    
+
+    public Person(Integer id, String name, String lastName, String email) {
+        this.id = id;
+        this.name = name;
+        this.lastName = lastName;
+        this.email = email;
+    }
 
     public String getLastName() {
         return lastName;
@@ -66,6 +73,7 @@ public class Person {
     }
 
     public void setName(String name) {
+        System.out.println("com.s.programowanieobiektoweprojekt.model.Person.setName()");
         this.name = name;
     }
 

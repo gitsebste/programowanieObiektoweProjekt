@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -24,6 +25,8 @@ public class Unit {
     private String name;
     @NotEmpty @Column(unique=true)
     private String shortName;
+    @OneToOne
+    private UserWithAccessLevel head;
 
     @Override
     public String toString() {
