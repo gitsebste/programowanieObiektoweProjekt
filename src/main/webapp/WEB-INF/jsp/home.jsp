@@ -34,5 +34,8 @@
             Get item by code <form:input path="name"/><form:button>Get this item</form:button>                            
         </form:form>
  
+                        <form:form commandName="person" action="/item/get/all.htm" method="POST">                                       
+            Get all items <form:button>Get all items</form:button>                            
+        </form:form>
     </body>
 </html>

@@ -46,6 +46,16 @@ public class ItemController {
         
         return model;
     }
+        @RequestMapping("/get/all")
+    public ModelAndView getall() {
+        
+      //  logger.debug("ItemController.get() + id = "+id);
+        
+        ModelAndView model = new ModelAndView("response");                
+        model.addObject("object", service.getAll());
+        
+        return model;
+    }
     @RequestMapping("/get/{id}")
     public ModelAndView get(@PathVariable("id") int id) {
         
