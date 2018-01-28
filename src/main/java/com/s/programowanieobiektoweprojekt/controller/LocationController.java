@@ -28,7 +28,7 @@ public class LocationController {
     protected Logger logger = Logger.getLogger(getClass());
     
     @Autowired @Qualifier("locationService")
-    GenericService<Location> locationService;//PersonDAO personDAO;
+    GenericService<Location> service;//PersonDAO personDAO;
     
     @RequestMapping("/add")
     public ModelAndView add() {
@@ -42,6 +42,18 @@ public class LocationController {
         
         return model;
     }
+    
+            @RequestMapping("/get/all")
+    public ModelAndView getAll( ) {
+        
+        logger.debug("LocationController.getAll()");
+        
+        ModelAndView model = new ModelAndView("response");                
+        model.addObject("object", service.getAll());
+        
+        return model;
+    }
+    
 //    @RequestMapping("/get/{id}")
 //    public ModelAndView get(@PathVariable("id") int id) {
 //        
@@ -60,7 +72,7 @@ public class LocationController {
         {
             return "addLocation";
         }
-        locationService.save(p);
+        service.save(p);
         //personDAO.save(p);
         
         return "redirect:/home.htm";

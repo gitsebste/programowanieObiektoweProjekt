@@ -1,0 +1,478 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.2.2" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <class id="1" language="java" name="com.s.programowanieobiektoweprojekt.service.UserService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/UserService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="241" x="860" y="1108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="2" language="java" name="com.s.programowanieobiektoweprojekt.service.UnitService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/UnitService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="204" x="1020" y="1571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="3" language="java" name="com.s.programowanieobiektoweprojekt.controller.MyController" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/controller/MyController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="117" width="211" x="63" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="4" language="java" name="com.s.programowanieobiektoweprojekt.model.Location" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model/Location.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="423" width="198" x="1544" y="1108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="com.s.programowanieobiektoweprojekt.service.LocationService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/LocationService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="204" x="1264" y="1571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="6" language="java" name="com.s.programowanieobiektoweprojekt.dao.UnitDAO" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/dao/UnitDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="188" x="1020" y="1962"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="7" language="java" name="com.s.programowanieobiektoweprojekt.service.GenericService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/GenericService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="204" x="1138" y="285"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="8" language="java" name="com.s.programowanieobiektoweprojekt.model.Emailable" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model/Emailable.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="198" x="2226" y="1962"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="9" language="java" name="com.s.programowanieobiektoweprojekt.model.Item" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model/Item.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="783" width="198" x="1660" y="285"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="10" language="java" name="com.s.programowanieobiektoweprojekt.dao.LocationDAO" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/dao/LocationDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="188" x="1264" y="1962"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="11" language="java" name="com.s.programowanieobiektoweprojekt.dao.PersonDAO" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/dao/PersonDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="188" x="1763" y="1962"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <package id="12" language="java" name="com.s.programowanieobiektoweprojekt.model" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="289" x="314" y="92"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="13" language="java" name="com.s.programowanieobiektoweprojekt.model.Unit" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model/Unit.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="261" width="198" x="1833" y="1108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="14" language="java" name="com.s.programowanieobiektoweprojekt.service.ItemService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/ItemService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="297" width="228" x="1234" y="1108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="15" language="java" name="com.s.programowanieobiektoweprojekt.model.UserWithAccessLevel" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model/UserWithAccessLevel.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="351" width="198" x="2007" y="1571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="16" language="java" name="com.s.programowanieobiektoweprojekt.service.NotificationService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/NotificationService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="81" width="204" x="643" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="17" language="java" name="com.s.programowanieobiektoweprojekt.controller.LocationController" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/controller/LocationController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="135" width="211" x="887" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="18" language="java" name="com.s.programowanieobiektoweprojekt.model.Person" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/model/Person.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="333" width="198" x="2226" y="1108"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="19" language="java" name="com.s.programowanieobiektoweprojekt.controller.UnitController" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/controller/UnitController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="211" x="1138" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="20" language="java" name="com.s.programowanieobiektoweprojekt.dao.ItemDAO" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/dao/ItemDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="215" x="1508" y="1571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <interface id="21" language="java" name="com.s.programowanieobiektoweprojekt.dao.UserDAO" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/dao/UserDAO.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="99" width="228" x="752" y="1571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <class id="22" language="java" name="com.s.programowanieobiektoweprojekt.controller.ItemController" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/controller/ItemController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="279" width="238" x="1382" y="285"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="23" language="java" name="com.s.programowanieobiektoweprojekt.controller.PersonController" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/controller/PersonController.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="153" width="211" x="1389" y="92"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="24" language="java" name="com.s.programowanieobiektoweprojekt.service" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="296" x="1640" y="92"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="25" language="java" name="com.s.programowanieobiektoweprojekt.dao" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/dao" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="275" x="1976" y="92"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <package id="26" language="java" name="com.s.programowanieobiektoweprojekt.controller" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/controller" binary="false" 
+    corner="BOTTOM_RIGHT">    
+    <position height="50" width="309" x="2291" y="92"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="27" language="java" name="com.s.programowanieobiektoweprojekt.service.PersonService" 
+    project="programowanieObiektoweProjekt" 
+    file="/programowanieObiektoweProjekt/src/main/java/com/s/programowanieobiektoweprojekt/service/PersonService.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="171" width="204" x="1763" y="1571"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <association id="28">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="29" name="person"/>      
+      <multiplicity id="30" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="18" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="31">    
+    <bendpoint x="1772" y="1108"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="32" name="pservice"/>      
+      <multiplicity id="33" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="34">    
+    <bendpoint x="1492" y="1108"/>    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="35">    
+    <bendpoint x="1203" y="1108"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="36" name="uservice"/>      
+      <multiplicity id="37" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="38">    
+    <end type="SOURCE" refId="19" navigable="false">      
+      <attribute id="39" name="service"/>      
+      <multiplicity id="40" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="41">    
+    <end type="SOURCE" refId="1" navigable="false">      
+      <attribute id="42" name="dao"/>      
+      <multiplicity id="43" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="21" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="44">    
+    <bendpoint x="2235" y="1571"/>    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <association id="45">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="46" name="dao"/>      
+      <multiplicity id="47" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="20" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="48">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="49" name="lservice"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="51">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="52" name="locationDAO"/>      
+      <multiplicity id="53" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="10" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="54">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="55" name="pservice"/>      
+      <multiplicity id="56" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="57">    
+    <end type="SOURCE" refId="14" navigable="false">      
+      <attribute id="58" name="uservice"/>      
+      <multiplicity id="59" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="2" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="60">    
+    <bendpoint x="1182" y="1108"/>    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="61">    
+    <bendpoint x="1513" y="1108"/>    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="62" name="lservice"/>      
+      <multiplicity id="63" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="5" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="64">    
+    <end type="SOURCE" refId="23" navigable="false">      
+      <attribute id="65" name="personService"/>      
+      <multiplicity id="66" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="67">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <generalization id="68">    
+    <end type="SOURCE" refId="14"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="69">    
+    <end type="SOURCE" refId="27" navigable="false">      
+      <attribute id="70" name="dao"/>      
+      <multiplicity id="71" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="11" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="72">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="73" name="locationService"/>      
+      <multiplicity id="74" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="7" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="75">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="76" name="unit"/>      
+      <multiplicity id="77" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="13" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="78">    
+    <end type="SOURCE" refId="2" navigable="false">      
+      <attribute id="79" name="dao"/>      
+      <multiplicity id="80" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="6" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="81">    
+    <end type="SOURCE" refId="22" navigable="false">      
+      <attribute id="82" name="service"/>      
+      <multiplicity id="83" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="14" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="84">    
+    <end type="SOURCE" refId="15"/>    
+    <end type="TARGET" refId="8"/>  
+  </realization>  
+  <generalization id="85">    
+    <bendpoint x="1131" y="1108"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="7"/>  
+  </generalization>  
+  <association id="86">    
+    <end type="SOURCE" refId="13" navigable="false">      
+      <attribute id="87" name="head"/>      
+      <multiplicity id="88" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="15" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="89">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="90" name="location"/>      
+      <multiplicity id="91" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="4" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

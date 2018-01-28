@@ -34,8 +34,17 @@
             Get item by code <form:input path="name"/><form:button>Get this item</form:button>                            
         </form:form>
  
-                        <form:form commandName="person" action="/item/get/all.htm" method="POST">                                       
+        <form:form commandName="person" action="/item/get/all.htm" method="POST">                                       
             Get all items <form:button>Get all items</form:button>                            
         </form:form>
+            
+            <form:form commandName="person" action="/unit/get/all.htm" method="POST">                                       
+            Get all units <form:button>Get all units</form:button>                            
+        </form:form>
+            
+            <form:form commandName="person" action="/location/get/all.htm" method="POST">                                       
+            Get all locations <form:button>Get all locations</form:button>                            
+        </form:form>
+            
     </body>
 </html>

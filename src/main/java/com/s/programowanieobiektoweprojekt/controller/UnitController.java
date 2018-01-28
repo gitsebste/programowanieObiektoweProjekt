@@ -52,6 +52,16 @@ public class UnitController {
         
         return model;
     }
+        @RequestMapping("/get/all")
+    public ModelAndView getAll( ) {
+        
+        logger.debug("UnitController.getAll()");
+        
+        ModelAndView model = new ModelAndView("response");                
+        model.addObject("object", service.getAll());
+        
+        return model;
+    }
     @RequestMapping(value = "/save", method = RequestMethod.POST)
     public String save(@Valid Unit p,BindingResult bindingResult) {
         logger.debug("UnitController.get() + unit = "+p);//System.out.println(p);
