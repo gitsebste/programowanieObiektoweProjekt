@@ -18,6 +18,7 @@
             name        <form:input path="name"/>       <form:errors path="name"/>  <br/>
             lastName   <form:input path="lastName"/>   <form:errors path="lastName"/>  <br/>
             email      <form:input path="email"/>      <form:errors path="email"/>  <br/>
+            unitShortName      <form:input path="unitShortName"/>      <form:errors path="unitShortName"/>  <br/>
             
             <form:button>Zapisz</form:button>
                 

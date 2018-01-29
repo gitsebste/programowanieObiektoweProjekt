@@ -3,17 +3,17 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.s.programowanieobiektoweprojekt.service;
+package com.s.programowanieprojekt.service;
 
-import com.s.programowanieobiektoweprojekt.dao.LocationDAO;
-import com.s.programowanieobiektoweprojekt.model.Location;
+import com.s.programowanieprojekt.dao.LocationDAO;
+import com.s.programowanieprojekt.model.Location;
 import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  *
  * @author device02
  */
-public class LocationService extends GenericServic<Location>{
+public class LocationService extends GenericService<Location>{
     
     private Location lastGetted;
 
@@ -57,4 +57,8 @@ public Location getByNameForNotWorkingController(String name) {
         System.out.println(lastGetted);
         return lastGetted;
     }    
+
+    Location getObjByName(String locationName) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

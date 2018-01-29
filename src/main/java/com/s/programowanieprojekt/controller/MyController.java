@@ -1,10 +1,10 @@
 /*
  * Copyright 2011-08-31 the original author or authors.
  */
-package com.s.programowanieobiektoweprojekt.controller;
+package com.s.programowanieprojekt.controller;
 
-import com.s.programowanieobiektoweprojekt.model.Person;
-import com.s.programowanieobiektoweprojekt.service.NotificationService;
+import com.s.programowanieprojekt.model.Person;
+import com.s.programowanieprojekt.service.NotificationService;
 import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

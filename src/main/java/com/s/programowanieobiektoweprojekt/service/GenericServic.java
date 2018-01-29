@@ -5,6 +5,7 @@
  */
 package com.s.programowanieobiektoweprojekt.service;
 
+import com.s.programowanieobiektoweprojekt.model.Location;
 import java.util.List;
 import org.springframework.stereotype.Service;
 
@@ -15,7 +16,7 @@ import org.springframework.stereotype.Service;
  * @param <T>
  */
 @Service
-public abstract class GenericService<T> {
+public abstract class GenericServic<T> {
   
     
     

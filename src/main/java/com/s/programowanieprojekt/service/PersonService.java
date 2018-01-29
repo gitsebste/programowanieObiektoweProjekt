@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.s.programowanieobiektoweprojekt.service;
+package com.s.programowanieprojekt.service;
 
-import com.s.programowanieobiektoweprojekt.dao.PersonDAO;
-import com.s.programowanieobiektoweprojekt.model.Item;
-import com.s.programowanieobiektoweprojekt.model.Person;
+import com.s.programowanieprojekt.dao.PersonDAO;
+import com.s.programowanieprojekt.model.Item;
+import com.s.programowanieprojekt.model.Person;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
  * @author device02
  */
 @Service
-public class PersonService extends GenericServic<Person>{
+public class PersonService extends GenericService<Person>{
 
     @Autowired            
     PersonDAO dao;
@@ -41,10 +41,8 @@ public class PersonService extends GenericServic<Person>{
         return dao.findById(objId);        
     }
         public Person getObjByEmail(String email) {
-            System.out.println("getObjByEmail |"+email+"|");
         Person ans = dao.findByEmail(email);        
-        if(ans.getUnitShortName()!=null)
-         ans.setUnit(uservice.getObjByShortName(ans.getUnitShortName()));
+        ans.setUnit(uservice.getObjByShortName(ans.getUnitShortName()));
         return ans;
     }
          public List<Person> getObjByUnitShortName(String unitShortName) {

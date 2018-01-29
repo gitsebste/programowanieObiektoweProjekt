@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.s.programowanieobiektoweprojekt.service;
+package com.s.programowanieprojekt.service;
 
-import com.s.programowanieobiektoweprojekt.dao.PersonDAO;
-import com.s.programowanieobiektoweprojekt.dao.UnitDAO;
-import com.s.programowanieobiektoweprojekt.model.Person;
-import com.s.programowanieobiektoweprojekt.model.Unit;
+import com.s.programowanieprojekt.dao.PersonDAO;
+import com.s.programowanieprojekt.dao.UnitDAO;
+import com.s.programowanieprojekt.model.Person;
+import com.s.programowanieprojekt.model.Unit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +18,7 @@ import org.springframework.stereotype.Service;
  * @author device02
  */
 @Service
-public class UnitService extends GenericServic<Unit>{
+public class UnitService extends GenericService<Unit>{
 
     @Autowired            
     UnitDAO dao;

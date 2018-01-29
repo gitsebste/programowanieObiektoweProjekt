@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.s.programowanieobiektoweprojekt.dao;
+package com.s.programowanieprojekt.dao;
 
-import com.s.programowanieobiektoweprojekt.model.Person;
+import com.s.programowanieprojekt.model.Person;
 import java.util.List;
 import org.springframework.data.repository.CrudRepository;
 

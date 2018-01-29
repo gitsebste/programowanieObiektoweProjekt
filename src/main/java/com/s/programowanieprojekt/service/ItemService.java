@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.s.programowanieobiektoweprojekt.service;
+package com.s.programowanieprojekt.service;
 
-import com.s.programowanieobiektoweprojekt.dao.ItemDAO;
-import com.s.programowanieobiektoweprojekt.model.Item;
+import com.s.programowanieprojekt.dao.ItemDAO;
+import com.s.programowanieprojekt.model.Item;
 import java.util.ArrayList;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +18,8 @@ import org.springframework.stereotype.Service;
  * @author device02
  */
 @Service
-public class ItemService extends GenericServic<Item>{
+public class ItemService //extends GenericService<Item>{
+    {
 
     @Autowired            
     ItemDAO dao;
@@ -30,23 +31,23 @@ public class ItemService extends GenericServic<Item>{
     @Autowired            
     LocationService lservice;
     
-    @Override
+    
     public Iterable<Item> getAll() {
         List<Item> ans = new ArrayList<Item>();
         for(Item item :dao.findAll())
             ans.add(item);
-        getData(ans);
+        //getData(ans);
         return ans; 
         
     }
 
-    @Override
+    
     public void save(Item toSave) {
         setNotUsedToNull(toSave);
         dao.save(toSave);
     }
 
-    @Override
+    
     public Item getObjById(int objId) {
         return dao.findById(objId);        
     }
@@ -90,7 +91,7 @@ public class ItemService extends GenericServic<Item>{
         return ans;//dao.findByUnitShortName(shortName);
     }   
 
-    @Override
+    
     public void update(Item toUpdate) {
         
         setNotUsedToNull(toUpdate);
@@ -101,7 +102,7 @@ public class ItemService extends GenericServic<Item>{
         if(!IsNull(toUpdate.getPersonEmail()))
             toUpdate.setPerson(pservice.getObjByEmail(toUpdate.getPersonEmail()));
         if(!IsNull(toUpdate.getLocationName()))
-            toUpdate.setLocation(lservice.getByName(toUpdate.getLocationName()));
+            toUpdate.setLocation(lservice.getObjByName(toUpdate.getLocationName()));
             
         dao.save(toUpdate);
     }
@@ -112,15 +113,14 @@ public class ItemService extends GenericServic<Item>{
     }
 
     private void setNotUsedToNull(Item toSave) {
-                if(toSave.getLocation()!=null)if(toSave.getLocation().getId()==null)toSave.setLocation(null);
-        if(toSave.getPerson()!=null)if(toSave.getPerson().getId()==null)toSave.setPerson(null);
-        if(toSave.getUnit()!=null)if(toSave.getUnit().getId()==null)toSave.setUnit(null);
-        
-        if(!IsNull(toSave.getPersonEmail()))//!=null)
-            toSave.setPerson(pservice.getObjByEmail(toSave.getPersonEmail()));
-        if(!IsNull(toSave.getLocationName()))//!=null)
-            toSave.setLocation(lservice.getByName(toSave.getLocationName()));
-        if(!IsNull(toSave.getUnitShortName()))//!=null)
-            toSave.setUnit(uservice.getObjByShortName(toSave.getUnitShortName()));
+//                if(toSave.getLocation()!=null)if(toSave.getLocation().getId()==null)toSave.setLocation(null);
+//        if(toSave.getPerson()!=null)if(toSave.getPerson().getId()==null)toSave.setPerson(null);
+//        if(toSave.getUnit()!=null)if(toSave.getUnit().getId()==null)toSave.setUnit(null);        
+//        if(toSave.getPersonEmail()!=null)            
+//            toSave.setPerson(pservice.getObjByEmail(toSave.getPersonEmail()));        
+//        if(toSave.getLocationName()!=null)            
+//            toSave.setLocation(lservice.getByName(toSave.getLocationName()));        
+//        if(toSave.getUnitShortName()!=null)            
+//            toSave.setUnit(uservice.getObjByShortName(toSave.getUnitShortName()));        
     }
     }

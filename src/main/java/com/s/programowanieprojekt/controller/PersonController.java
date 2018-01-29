@@ -1,12 +1,12 @@
 /*
  * Copyright 2011-08-31 the original author or authors.
  */
-package com.s.programowanieobiektoweprojekt.controller;
+package com.s.programowanieprojekt.controller;
 
-import com.s.programowanieobiektoweprojekt.model.Location;
-import com.s.programowanieobiektoweprojekt.model.Person;
-import com.s.programowanieobiektoweprojekt.service.GenericServic;
-import com.s.programowanieobiektoweprojekt.service.PersonService;
+import com.s.programowanieprojekt.model.Location;
+import com.s.programowanieprojekt.model.Person;
+import com.s.programowanieprojekt.service.GenericService;
+import com.s.programowanieprojekt.service.PersonService;
 import javax.validation.Valid;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,12 +1,12 @@
 /*
  * Copyright 2011-08-31 the original author or authors.
  */
-package com.s.programowanieobiektoweprojekt.controller;
+package com.s.programowanieprojekt.controller;
 
-import com.s.programowanieobiektoweprojekt.model.Item;
-import com.s.programowanieobiektoweprojekt.model.Person;
-import com.s.programowanieobiektoweprojekt.service.GenericServic;
-import com.s.programowanieobiektoweprojekt.service.ItemService;
+import com.s.programowanieprojekt.model.Item;
+import com.s.programowanieprojekt.model.Person;
+import com.s.programowanieprojekt.service.GenericService;
+import com.s.programowanieprojekt.service.ItemService;
 import java.util.ArrayList;
 import javax.validation.Valid;
 import org.apache.log4j.Logger;
@@ -72,8 +72,9 @@ public class ItemController {
         
         logger.debug("ItemController.getByUnitShortName(){shortName} + shortName = "+shortName);
         
-        ModelAndView model = new ModelAndView("response");              
-        model.addObject("object", service.getObjByUnitShortName(shortName));
+        ModelAndView model = new ModelAndView("response");  
+            System.out.println("com.s.programowanieobiektoweprojekt.controller.ItemController.getByUnitShortName()");        
+        model.addObject("object", new ArrayList<Person>());
         //model.addObject("object", service.getObjByUnitShortName(shortName));
         
         return model;
