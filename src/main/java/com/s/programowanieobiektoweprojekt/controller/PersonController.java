@@ -117,8 +117,17 @@ public class PersonController {
         
         update=false;
         
-        return "redirect:/home.htm";
+        return "redirect:/home.htm";    
+    }
     
+                        @RequestMapping("/deleteByEmail")
+    public String deleteByEmail(Person p) {
+        String name = p.getName();
+        logger.debug("PersonController.deleteByEmail() + email = "+name);
+        
+        personService.deleteByEmail(name);
+        
+        return "redirect:/home.htm";
     }
     
 }

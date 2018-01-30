@@ -69,5 +69,20 @@
             Update unit by shortName <form:input path="name"/><form:button>Update this unit</form:button>                            
         </form:form>
             
+            <form:form commandName="person" action="/item/deleteByCode.htm" method="POST">                                       
+            Delete item by code <form:input path="name"/><form:button>Delete this by code</form:button>                            
+        </form:form>
+            
+            <form:form commandName="person" action="/location/deleteByName.htm" method="POST">                                       
+            Delete location by name <form:input path="name"/><form:button>Delete this by name</form:button>                            
+        </form:form>
+            
+             <form:form commandName="person" action="/person/deleteByEmail.htm" method="POST">                                       
+            Delete person by email <form:input path="name"/><form:button>Delete this by email</form:button>                            
+        </form:form>
+            <form:form commandName="person" action="/unit/deleteByShortName.htm" method="POST">                                       
+            Delete unit by shortName <form:input path="name"/><form:button>Delete this by shortName</form:button>                            
+        </form:form>
+            
     </body>
 </html>

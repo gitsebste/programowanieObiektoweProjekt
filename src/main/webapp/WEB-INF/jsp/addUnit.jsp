@@ -9,10 +9,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Dodawanie obiektu</title>
+        <title>Add/Update</title>
     </head>
     <body>
-        <h1>Dodaj obiekt</h1>
+        <h1>Add/Update</h1>
         
         <form:form commandName="obj" action="save.htm" method="POST">
             name        <form:input path="name"/>       <form:errors path="name"/>  <br/>

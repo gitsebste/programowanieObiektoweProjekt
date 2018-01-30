@@ -47,6 +47,10 @@ public class UnitService extends GenericServic<Unit>{
         toUpdate.setId(getObjByShortName(toUpdate.getShortName()).getId());
         dao.save(toUpdate);
     }
+
+    public void deleteByShortName(String name) {
+        dao.delete(getObjByShortName(name));
+    }
   
     
 }

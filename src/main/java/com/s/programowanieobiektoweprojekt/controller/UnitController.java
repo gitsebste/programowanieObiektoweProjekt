@@ -108,8 +108,17 @@ public class UnitController {
         update=false;
         //personDAO.save(p);
         
-        return "redirect:/home.htm";
+        return "redirect:/home.htm";    
+    }
     
+                            @RequestMapping("/deleteByShortName")
+    public String deleteByShortName(Person p) {
+        String name = p.getName();
+        logger.debug("PersonController.deleteByShortName() + shortName = "+name);
+        
+        service.deleteByShortName(name);
+        
+        return "redirect:/home.htm";
     }
     
 }

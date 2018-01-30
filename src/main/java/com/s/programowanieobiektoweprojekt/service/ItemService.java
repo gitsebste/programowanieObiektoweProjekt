@@ -106,6 +106,12 @@ public class ItemService extends GenericServic<Item>{
         dao.save(toUpdate);
     }
     
+      public void deleteByCode(String code) {
+          
+          dao.delete(getObjByCode(code));
+          
+    }
+    
     boolean IsNull(String tmp)
     {
         return (tmp==null || tmp.equals(""));

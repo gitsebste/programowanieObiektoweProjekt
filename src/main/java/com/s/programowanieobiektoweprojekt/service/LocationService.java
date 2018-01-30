@@ -57,4 +57,8 @@ public Location getByNameForNotWorkingController(String name) {
         System.out.println(lastGetted);
         return lastGetted;
     }    
+
+    public void deleteByName(String name) {
+        locationDAO.delete( getByName(name));
+    }
 }

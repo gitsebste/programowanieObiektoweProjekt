@@ -76,6 +76,10 @@ public class PersonService extends GenericServic<Person>{
         toUpdate.setId(getObjByEmail(toUpdate.getEmail()).getId());
         dao.save(toUpdate);
     }
+
+    public void deleteByEmail(String name) {
+        dao.delete(getObjByEmail(name));
+    }
   
     
 }

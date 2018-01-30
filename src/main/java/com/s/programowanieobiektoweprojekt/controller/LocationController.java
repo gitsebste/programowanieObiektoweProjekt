@@ -96,8 +96,16 @@ public class LocationController {
         service.save(location);
         //personDAO.save(p);
         update=false;
+        return "redirect:/home.htm";    
+    }
+                    @RequestMapping("/deleteByName")
+    public String deleteByName(Person p) {
+        String name = p.getName();
+        logger.debug("LocationController.deleteByName() + name = "+name);
+        
+        service.deleteByName(name);
+        
         return "redirect:/home.htm";
-    
     }
 
 //    

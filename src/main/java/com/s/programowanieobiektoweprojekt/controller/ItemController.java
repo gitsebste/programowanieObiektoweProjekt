@@ -163,8 +163,17 @@ public class ItemController {
         service.update(p);
         //personDAO.save(p);
         
-        return "redirect:/home.htm";
+        return "redirect:/home.htm";   
+    }
     
+                @RequestMapping("/deleteByCode")
+    public String deleteByCode(Person p) {
+        String name = p.getName();
+        logger.debug("ItemController.deleteByCode() + code = "+name);
+        
+        service.deleteByCode(name);
+        
+        return "redirect:/home.htm";
     }
     
 }
