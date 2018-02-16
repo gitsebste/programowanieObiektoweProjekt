@@ -5,12 +5,16 @@
  */
 package com.s.programowanieprojekt.service;
 
+import com.s.programowanieobiektoweprojekt.dto.OuterApi;
 import com.s.programowanieprojekt.dao.ItemDAO;
 import com.s.programowanieprojekt.model.Item;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 
 /**
@@ -30,13 +34,18 @@ public class ItemService //extends GenericService<Item>{
     PersonService pservice;
     @Autowired            
     LocationService lservice;
+    @Autowired            
+    RestTemplate restTemplate;
     
+    OuterApi<Item> api = new OuterApi<Item>();
     
     public Iterable<Item> getAll() {
-        List<Item> ans = new ArrayList<Item>();
+        HashSet<Item> ans = new HashSet<Item>();
         for(Item item :dao.findAll())
             ans.add(item);
-        //getData(ans);
+        for(Item item :api.getAll())
+            ans.add(item);
+        
         return ans; 
         
     }
@@ -49,21 +58,51 @@ public class ItemService //extends GenericService<Item>{
 
     
     public Item getObjById(int objId) {
-        return dao.findById(objId);        
+        Item tmp = dao.findById(objId);  
+        if(tmp!=null)return tmp;
+        List<Item> list = api.getAll();
+        for(Item el:list)
+            if(el.getId()==objId)return el;
+        return null;
     }
 
     public Item getObjByCode(String code) {
-        return dao.findByCode(code); 
+        Item tmp = dao.findByCode(code); 
+        if(tmp!=null)return tmp;
+        List<Item> list = api.getAll();
+        for(Item el:list)
+            if(el.getCode().equals(code))return el;
+        return null;
     }
         public List<Item> getObjByLocationBuilding(float building) {
-            List<Item> ans = dao.findByLocationBuilding(building); 
-        getData(ans);
-        return ans; 
+            HashSet<Item> ans = new HashSet<Item>();
+            for(Item el:dao.findByLocationBuilding(building))
+            {
+                ans.add(el);                
+            }
+            List<Item> list = api.getAll();
+        for(Item el:list)
+            if(el.getLocation().getBuilding()==building)ans.add(el);
+        list = new ArrayList();
+        for(Item el:ans)
+            list.add(el);
+        getData(list);
+        return list; 
     }
         public List<Item> getObjByLocationFloor(float floor) {
-             List<Item> ans = dao.findByLocationFloor(floor); 
-        getData(ans);
-        return ans;
+                        HashSet<Item> ans = new HashSet<Item>();
+            for(Item el:dao.findByLocationFloor(floor))
+            {
+                ans.add(el);                
+            }
+            List<Item> list = api.getAll();
+        for(Item el:list)
+            if(el.getLocation().getFloor()==floor)ans.add(el);
+        list = new ArrayList();
+        for(Item el:ans)
+            list.add(el);
+        getData(list);
+        return list; 
     }
 
     private void getData(List<Item> ans) {
@@ -81,14 +120,34 @@ public class ItemService //extends GenericService<Item>{
         }
     }
         public List<Item> getObjByLocationRoom(float room) {
-                    List<Item> ans = dao.findByLocationRoom(room);
-        getData(ans);
-        return ans;
+                                    HashSet<Item> ans = new HashSet<Item>();
+            for(Item el:dao.findByLocationRoom(room))
+            {
+                ans.add(el);                
+            }
+            List<Item> list = api.getAll();
+        for(Item el:list)
+            if(el.getLocation().getFloor()==room)ans.add(el);
+        list = new ArrayList();
+        for(Item el:ans)
+            list.add(el);
+        getData(list);
+        return list; 
     }
            public List<Item> getObjByUnitShortName(String shortName) {
-               List<Item> ans = dao.findByUnitShortName(shortName);
-        getData(ans);
-        return ans;//dao.findByUnitShortName(shortName);
+               HashSet<Item> ans = new HashSet<Item>();
+            for(Item el:dao.findByUnitShortName(shortName))
+            {
+                ans.add(el);                
+            }
+            List<Item> list = api.getAll();
+        for(Item el:list)
+            if(el.getUnitShortName().equals(shortName))ans.add(el);
+        list = new ArrayList();
+        for(Item el:ans)
+            list.add(el);
+        getData(list);
+        return list;        
     }   
 
     
@@ -96,7 +155,17 @@ public class ItemService //extends GenericService<Item>{
         
         setNotUsedToNull(toUpdate);
         
-        toUpdate.setId(getObjByCode(toUpdate.getCode()).getId());
+        Integer id = getObjByCode(toUpdate.getCode()).getId();
+        if(id==null)
+        {
+            List<Item> list = api.getAll();String code = toUpdate.getCode();
+            for(Item el:list)
+            {
+                if(el.getCode().equals(code)){id=el.getId();break;}
+            }
+        }
+        toUpdate.setId(id);
+        
         if(!IsNull(toUpdate.getUnitShortName()))
             toUpdate.setUnit(uservice.getObjByShortName(toUpdate.getUnitShortName()));
         if(!IsNull(toUpdate.getPersonEmail()))

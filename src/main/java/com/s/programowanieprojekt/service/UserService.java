@@ -5,6 +5,7 @@
  */
 package com.s.programowanieprojekt.service;
 
+import com.s.programowanieobiektoweprojekt.dto.OuterApi;
 import com.s.programowanieprojekt.dao.UserDAO;
 import com.s.programowanieprojekt.dao.UserDAO;
 import com.s.programowanieprojekt.model.UserWithAccessLevel;
@@ -19,6 +20,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UserService extends GenericService<UserWithAccessLevel>{
+    
+    OuterApi<UserWithAccessLevel> api = new OuterApi<UserWithAccessLevel>();    
 
     @Autowired            
     UserDAO dao;

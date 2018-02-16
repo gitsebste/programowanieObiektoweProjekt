@@ -5,6 +5,7 @@
  */
 package com.s.programowanieprojekt.service;
 
+import com.s.programowanieobiektoweprojekt.dto.OuterApi;
 import com.s.programowanieprojekt.dao.LocationDAO;
 import com.s.programowanieprojekt.model.Location;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
  * @author device02
  */
 public class LocationService extends GenericService<Location>{
+    
+    OuterApi<Location> api = new OuterApi<Location>();
     
     private Location lastGetted;
 
